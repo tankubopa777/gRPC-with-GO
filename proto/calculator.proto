@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package service;
+option go_package ="./service";
+
+
+service Calculator {
+    rpc Hello(HelloRequest) returns (HelloResponse) {};
+}
+
+// Request 
+message HelloRequest {
+    string name = 1;
+}
+
+// Response
+message HelloResponse {
+    string result = 1;
+}
+
+
